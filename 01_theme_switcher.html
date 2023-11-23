@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            position: absolute;
+            top: 20%;
+            left: 44%;
+        }
+        .buttons{
+            height: 70vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: nowrap;
+        }
+        .button{
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            border-radius: 20px;
+            border: 2px solid;
+            
+        }
+        #grey{
+            background-color: grey;
+        }
+        #dodgerblue{
+            background-color: dodgerblue;
+
+        }
+        #green{
+            background-color: green;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>Select a Theme</h1>
+    </div>
+    <div class="buttons">
+        
+        <div class="button" id="grey"></div>
+        <div class="button"id="dodgerblue"></div>
+        <div class="button" id="green"></div>
+        <div class="button" id="yellow"></div>
+    </div>
+</body>
+<script>
+    const head=document.querySelector(".head");
+    const body=document.querySelector("body");
+    const color=document.querySelectorAll(".button");
+    color.forEach((button)=>{
+        button.addEventListener("click",function(event){
+            if(event.target.id==="grey"){
+                body.style.backgroundColor=event.target.id;
+                head.style.color="red"
+            }
+            if(event.target.id==="dodgerblue"){
+                body.style.backgroundColor=event.target.id;
+                head.style.color="black"
+            }
+            if(event.target.id==="green"){
+                body.style.backgroundColor=event.target.id;
+                head.style.color="black"
+            }
+            if(event.target.id==="yellow"){
+                body.style.backgroundColor=event.target.id;
+                head.style.color="black"
+            }
+        })
+    })
+</script>
+</html>
